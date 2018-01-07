@@ -11,24 +11,24 @@ Vue.prototype.$ajax = axios
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
-
+axios.defaults.withCredentials = true
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   render: h => h(App),
   template: '<App/>',
-  components: { App },
-  method: {
-    submitForm () {
-      this.$ajax({
-        method: 'post',
-        url: '/user',
-        data: {
-          name: 'wise',
-          info: 'wrong'
-        }
-      })
-    }
-  }
+  components: { App }
+  // method: {
+  //   submitForm () {
+  //     this.$ajax({
+  //       method: 'post',
+  //       url: '/user',
+  //       data: {
+  //         name: 'wise',
+  //         info: 'wrong'
+  //       }
+  //     })
+  //   }
+  // }
 })

@@ -21,14 +21,14 @@ new Vue({
   components: { App },
   method: {
     submitForm () {
-    this.$ajax({
-     method: 'post',
-     url: '/user',
-     data: {
-     name: 'wise',
-     info: 'wrong'
-     }
-    })
-   }
+      this.$ajax({
+        method: 'post',
+        url: '/user',
+        data: {
+          name: 'wise',
+          info: 'wrong'
+        }
+      })
+    }
   }
 })

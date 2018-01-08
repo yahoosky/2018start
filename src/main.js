@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-
+import store from './store/store'
 import axios from 'axios'
 Vue.prototype.$ajax = axios
 
@@ -16,6 +16,7 @@ axios.defaults.withCredentials = true
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App),
   template: '<App/>',
   components: { App }

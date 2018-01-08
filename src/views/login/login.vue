@@ -16,6 +16,8 @@
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit">登录</el-button>
+        <p>{{$store.state.count}}</p>
+        <!-- <el-button type="primary" @click="onok">登录</el-button> -->
         <!-- <el-button>取消</el-button> -->
       </el-form-item>
      </el-form>
@@ -48,7 +50,7 @@ export default {
           if (response.data.code === 200) {
             console.log(response.data)
             //获取数据存入vuex
-
+            
             //数据存入cookie
 
           } else {
@@ -59,10 +61,12 @@ export default {
       .catch(
         function (error) {
           console.log('error:', error)
-        })
+        }
+      )
+      console.log('store:', store.state.count)
       console.log('username', this.form.username)
       console.log('password', this.form.password)
-    }
+    },
   }
 }
 </script>
